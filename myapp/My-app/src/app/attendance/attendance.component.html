@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Attendance</h1>
+
+  <div class="user">
+    <h2>Welcome, {{ username }}!</h2>
+    <p>You have been with us for a while, and we appreciate your dedication.</p>
+  </div>
+
+  <div class="in-out">
+    <h2>Clock In/Out</h2>
+    <form #attendanceForm="ngForm" (ngSubmit)="addAttendance()">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="text" id="date" class="form-control" [(ngModel)]="newAttendance.date" name="date" required />
+      </div>
+      <div class="in">
+        <label for="clockIn">Clock In:</label>
+        <input type="text" id="clockIn" class="form-control" [(ngModel)]="newAttendance.clockIn" name="clockIn" required />
+      </div>
+      <div class="out">
+        <label for="clockOut">Clock Out:</label>
+        <input type="text" id="clockOut" class="form-control" [(ngModel)]="newAttendance.clockOut" name="clockOut" required />
+      </div>
+      <div class="state">
+        <label for="status">Status:</label>
+        <select id="status" class="form-control" [(ngModel)]="newAttendance.status" name="status" required>
+          <option value="present">Present</option>
+          <option value="absent">Absent</option>
+          <option value="late">Late</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Save Attendance</button>
+      </div>
+    </form>
+  </div>
+</div>

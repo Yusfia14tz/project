@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Side navigation (sidenav) -->
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+      
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/attendance">Attendance</a>
+      <a mat-list-item href="#">attendance history</a>
+      <a mat-list-item href="#">report</a>
+
+      
+    </mat-nav-list>
+    
+  </mat-sidenav>
+
+  
+  <!-- Main content area (sidenav-content) -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      
+      <ng-container *ngIf="isHandset$ | async; else desktopToolbar">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </ng-container>
+      <ng-template #desktopToolbar>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>WORKER ATTENDANCE</span>
+
+        <div class="logout" style="margin-left: 40rem;">
+          <button><a href="dashboard">LOGOUT</a></button>
+      
+        </div>
+
+      </ng-template>
+    </mat-toolbar>
+
+   
+    <!-- Your main content goes here -->
+    <!-- Example: -->
+    <div style="padding: 20px;">
+      <img src="assets/pic.jpg" alt="Worker Picture" class="worker">
+    </div>
+    
+    <div class="outer-footer">
+      <p>Copyright &copy; 2024 Yusfia Developer</p>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

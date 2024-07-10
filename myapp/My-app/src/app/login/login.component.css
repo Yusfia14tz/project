@@ -1,0 +1,138 @@
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.att {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.log {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form div {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.sign {
+  width: 100%;
+}
+
+.sign button {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  height: 50px;
+  width: 100%;
+}
+
+.sign button:hover {
+  background-color: lavender;
+}
+
+.no, .fog {
+  font-size: 14px;
+  color: black;
+}
+
+.no a, .fog a {
+  color: blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sign a {
+  text-decoration: none;
+}
+
+.no a:hover, .fog a:hover {
+  color: lightblue;
+}
+
+hr {
+  margin-bottom: 50px;
+}
+
+.no button {
+  width: 100%;
+  height: 40px;
+  background-color: cornflowerblue;
+}
+
+.para {
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.error {
+  color: red;
+}

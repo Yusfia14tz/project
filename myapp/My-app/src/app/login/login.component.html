@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="content">
+    <div class="att"><p>Worker Attendance</p></div>
+    <p class="log">LOGIN</p>
+    <hr>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <div>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="login.username"
+          #username="ngModel"
+          required
+        />
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error">
+          Username is required.
+        </div>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="login.password"
+          #password="ngModel"
+          required
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+          Password is required.
+        </div>
+      </div>
+      <div class="sign">
+        <button type="submit" [disabled]="loginForm.invalid">SIGN IN</button>
+      </div>
+      <div class="no">
+        <div class="para"><p>create account</p></div>
+        <button><a href="register">SIGN UP</a></button>
+      </div>
+      <div class="fog">
+        <span><a href="forget-password" class="forget-password">Forgot password?</a></span>
+      </div>
+    </form>
+  </div>
+</div>
